@@ -1,0 +1,640 @@
+/* -------- General Styles ----------------- */
+* {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+:root {
+    --textColor: #6D1E1E;
+    --navColor1: #6D1E1E;
+    --navColor2: #310B0B;
+    --navColor3: #E65656;
+    --navColor4: #FF6D6D;
+    --headingTextSize: 4rem;
+    --box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* --- Navigation Menu ------------------------------ */
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    transform: translateX(-100vw);
+}
+
+.overlay-slide-right {
+    transition: all .4s ease-in-out;
+    transform: translateX(0);
+}
+
+.overlay-slide-left {
+    transition: all .8s ease-in-out;
+    transform: translateX(-100vw);
+}
+
+/* Nav Menu Items */
+nav,
+nav ul {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    list-style: none;
+}
+
+nav ul li {
+    height: 25%;
+    overflow: hidden;
+}
+
+nav li a {
+    position: relative;
+    top: 45%;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+}
+
+nav li a:hover {
+    transform: scale(1.2);
+}
+
+nav li a::before {
+    content: "";
+    width: 25vw;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 47.5%;
+    left: 0;
+    opacity: 0;
+}
+
+nav li a::after {
+    content: "";
+    width: 25vw;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 47.5%;
+    right: 0;
+    opacity: 0;
+}
+
+nav li a:hover::before {
+    opacity: 1;
+}
+
+nav li a:hover::after {
+    opacity: 1;
+}
+
+
+nav li:nth-of-type(1) {
+    background-color: var(--navColor1);
+}
+
+nav li:nth-of-type(2) {
+    background-color: var(--navColor2);
+}
+
+nav li:nth-of-type(3) {
+    background-color: var(--navColor3);
+}
+
+nav li:nth-of-type(4) {
+    background-color: var(--navColor4);
+}
+
+
+/* Slide IN Animation, delayed for each nav item */
+.slide-in-1 {
+    animation: slide-in .4s linear .2s both;
+}
+
+.slide-in-2 {
+    animation: slide-in .4s linear .4s both;
+}
+
+.slide-in-3 {
+    animation: slide-in .4s linear .6s both;
+}
+
+.slide-in-4 {
+    animation: slide-in .4s linear .8s both;
+}
+
+.slide-in-5 {
+    animation: slide-in .4s linear 1s both;
+}
+
+/* Defining the animation called "slide in" */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Slide OUT Animation */
+.slide-out-1 {
+    animation: slide-out .3s linear 1s both;
+}
+
+.slide-out-2 {
+    animation: slide-out .3s linear .8s both;
+}
+
+.slide-out-3 {
+    animation: slide-out .3s linear .6s both;
+}
+
+.slide-out-4 {
+    animation: slide-out .3s linear .4s both;
+}
+
+.slide-out-5 {
+    animation: slide-out .3s linear .2s both;
+}
+
+/* Defining the animation called "slide in" */
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* --- Hamburger Menu Bars ------------------------------------ */
+
+.menu-bars {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 10;
+    display: inline;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: whitesmoke;
+    margin: 8px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+
+/* --------- Landing Page -------------- */
+
+#landing-page {
+    background-image: url("https://images.unsplash.com/photo-1497091071254-cc9b2ba7c48a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80");
+    /*./images/landingImg.jpg*/
+    /*https://images.unsplash.com/photo-1494498902093-87f291949d17?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"*/
+    background-size: cover;
+    height: 100vh;
+    /*position: relative;*/
+}
+
+.main-landing-container {
+    margin-left: 4%;
+}
+
+.main-heading {
+    font-size: 10rem;
+    letter-spacing: .8rem;
+    color: whitesmoke;
+    padding-top: 3rem;
+}
+
+
+.sub-landing-container {
+    margin-left: 10.5%;
+}
+
+
+.sub-heading {
+    font-size: 3rem;
+    color: whitesmoke;
+    font-weight: 300;
+    padding-top: 2.5rem;
+}
+
+.img-landing-container {
+    margin-left: 28%;
+}
+
+.far {
+    color: var(--textColor);
+    font-size: 16rem;
+    padding-top: 6rem;
+}
+
+.far:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+
+/* ------- Product Description --------------*/
+#product-description {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+
+}
+
+.description-image-container {
+    background-color: black;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-image {
+    height: 28rem;
+}
+
+.description-info-container {
+    background-image: linear-gradient(to right, #9d9da2, #ebebf2);
+    flex-basis: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description-title {
+    font-size: 5.5rem;
+    color: var(--textColor);
+    margin-bottom: 5rem;
+}
+
+.description-info {
+    font-size: 1.8rem;
+    width: 75%;
+    margin-bottom: 5rem;
+}
+
+/* ------- Options and Prices --------------*/
+#options-prices {
+    height: 100vh;
+    background: var(--textColor);
+    position: relative;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 5rem;
+
+}
+
+.price-box {
+    text-align: center;
+    color: whitesmoke;
+    border: solid 1px white;
+    flex-basis: 25%;
+    border-radius: .8rem;
+    background-image: linear-gradient(to right, #9d9da2, #ebebf2);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.price-box:hover {
+    transform: translateY(-.5rem);
+}
+
+
+.price-box-image {
+    height: 250px;
+    width: 250px;
+}
+
+
+.price-box-bullet {
+    padding: .5rem;
+    font-size: 2rem;
+    color: black;
+}
+
+.price-box h2 {
+    font-size: 4rem;
+    color: black;
+}
+
+.price-box-bullet {
+    margin-top: 1.2rem;
+}
+
+.price-button {
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 2rem;
+    border-radius: .8rem;
+    margin-top: 2.5rem;
+    padding: .8rem;
+    box-shadow: var(--box-shadow);
+    outline: none;
+}
+
+.price-button:active {
+    transform: translateY(.2rem);
+    box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.5);;
+}
+
+/* ------- Contact --------------*/
+#contact-us {
+    background-color: #010101;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23b1b0b3' fill-opacity='0.24'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    height: 100vh;
+}
+
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.fab,
+.fas {
+    font-size: 10rem;
+    margin-right: 6rem;
+    cursor: pointer;
+    color: var(--textColor);
+}
+
+.fab:hover,
+.fas:hover {
+    transform: scale(1.1);
+    color: whitesmoke;
+}
+
+/*----- Footer ---------*/
+
+footer {
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+}
+
+footer p {
+    color: var(--textColor);
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*------------------------------ Media Queries ------------------------------------------------------------------*/
+
+/*------------------------------ TABLET ------------------------------------------------------------------*/
+
+@media screen and (max-width: 950px) {
+
+    /* --- Navigation Menu ----------- */
+    nav li a {
+        font-size: 5rem;
+    }
+    /* --- Hamburger Menu Bars ------------- */
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 50px;
+    }
+    /* --------- Landing Page ----------- */
+    #landing-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .img-landing-container {
+        margin-left: 0;
+    }
+
+    .sub-landing-container {
+        margin-left: 0;
+    }
+
+    .far {
+        font-size: 20rem;
+    }
+
+    /* ------- Product Description ----------*/
+    #product-description {
+        flex-direction: column;
+    }
+
+    .description-image {
+        margin: 6rem 0;
+    }
+
+    .description-title {
+        font-size: 6rem;
+        margin-top: 2rem;
+    }
+
+    .description-info {
+        font-size: 2.2rem;
+    }
+
+    /* ------- Options and Prices --------*/
+    #options-prices {
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .price-container {
+        flex-direction: column;
+    }
+
+    .price-box {
+        width: 60%;
+        margin-top: 4rem;
+    }
+
+    .price-box-bullet {
+        font-size: 3rem;
+    }
+
+    .price-box h2 {
+        font-size: 5rem;
+    }
+
+
+    .price-button {
+        font-size: 3rem;
+        box-shadow: none;
+    }
+
+    /* ------- Contact --------------*/
+
+    .social-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fab,
+    .fas {
+        font-size: 18rem;
+        margin-right: 0;
+    }
+
+    /* ------- Footer --------------*/
+
+    .footer p {
+        font-size: 2rem;
+    }
+
+}
+
+/* -------------------------------------------------- PHONE ---------------------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+
+    nav li a {
+        font-size: 3rem;
+    }
+
+    /* --- Hamburger Menu Bars ------------- */
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 35px;
+    }
+
+    /* --------- Landing Page ----------- */
+
+    .main-heading {
+        font-size: 5rem;
+        letter-spacing: 0;
+    }
+
+    .sub-landing-container {
+        margin-left: 3rem;
+    }
+
+
+    .far {
+        font-size: 16rem;
+    }
+
+    /* ------- Product Description ----------*/
+    #product-description {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .description-image {
+        height: 14rem;
+    }
+
+
+    /*!* ------- Options and Prices --------*!*/
+    /*.price-container {*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
+
+    .price-box {
+        width: 95%;
+    }
+
+    .price-box h2 {
+        font-size: 5rem;
+        color: var(--textColor)
+    }
+
+    .price-box-image {
+        display: none;
+    }
+
+    .price-box-bullet {
+        font-size: 2rem;
+    }
+
+    .price-button {
+        font-size: 2rem;
+        box-shadow: none;
+    }
+
+    /* ------- Contact --------------*/
+
+    .social-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fab,
+    .fas {
+        font-size: 12rem;
+    }
+
+    /* ------- Footer --------------*/
+
+    .footer p {
+        font-size: 2rem;
+    }
+
+}
