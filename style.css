@@ -450,7 +450,6 @@ footer p {
         font-size: 5rem;
     }
 
-
     nav li a::before {
         display: none;
     }
@@ -582,7 +581,7 @@ footer p {
 @media screen and (max-width: 600px) {
 
     nav li a {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
 
