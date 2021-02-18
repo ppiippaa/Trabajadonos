@@ -6,6 +6,14 @@ const nav3 = document.getElementById('nav-3');
 const nav4 = document.getElementById('nav-4');
 const navItems = [nav1, nav2, nav3, nav4];
 
+
+const link = document.querySelector('#favicon')
+if (window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    link.setAttribute('href', "images/lightbulbDarkMode.png");
+}
+
+
 // Control Navigation Animation
 function navAnimation(direction1, direction2) {
     navItems.forEach((nav, i) => {
@@ -45,3 +53,5 @@ navItems.forEach((nav) => {
 // Dynamic Footer Date
 let year = new Date().getFullYear();
 document.getElementById('footer-date').innerHTML = year;
+
+
