@@ -443,7 +443,7 @@ footer p {
 
 /*------------------------------ TABLET ------------------------------------------------------------------*/
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 800px) {
 
     /* --- Navigation Menu ----------- */
     nav li a {
@@ -458,26 +458,42 @@ footer p {
     /* --------- Landing Page ----------- */
     #landing-page {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
     }
 
-    .img-landing-container {
-        margin-left: 0;
+    .main-heading {
+        font-size: 8rem;
+        letter-spacing: 0;
+    }
+
+    .sub-landing-container {
+        max-width: 80%;
     }
 
     .sub-landing-container {
         margin-left: 0;
     }
 
+    .sub-heading {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .img-landing-container {
+        margin-left: 0;
+    }
+
     .far {
-        font-size: 20rem;
+        font-size: 15rem;
     }
 
     /* ------- Product Description ----------*/
     #product-description {
         flex-direction: column;
+        height: auto;
     }
 
     .description-image {
@@ -485,12 +501,12 @@ footer p {
     }
 
     .description-title {
-        font-size: 6rem;
+        font-size: 7rem;
         margin-top: 2rem;
     }
 
     .description-info {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     /* ------- Options and Prices --------*/
@@ -504,22 +520,27 @@ footer p {
     }
 
     .price-box {
-        width: 60%;
+        width: 75%;
         margin-top: 4rem;
     }
+
+
+    .price-box h2 {
+        font-size: 6rem;
+    }
+
 
     .price-box-bullet {
         font-size: 3rem;
     }
 
-    .price-box h2 {
-        font-size: 5rem;
-    }
+
 
 
     .price-button {
         font-size: 3rem;
         box-shadow: none;
+        margin: 3rem 0;
     }
 
     /* ------- Contact --------------*/
@@ -534,14 +555,14 @@ footer p {
 
     .fab,
     .fas {
-        font-size: 18rem;
+        font-size: 15rem;
         margin-right: 0;
     }
 
     /* ------- Footer --------------*/
 
     .footer p {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
 }
@@ -562,19 +583,30 @@ footer p {
     }
 
     /* --------- Landing Page ----------- */
+    #landing-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
 
     .main-heading {
-        font-size: 5rem;
+        font-size: 3.5rem;
         letter-spacing: 0;
     }
 
     .sub-landing-container {
-        margin-left: 3rem;
+        max-width: 80%;
     }
 
+    .sub-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
 
     .far {
-        font-size: 16rem;
+        font-size: 12rem;
     }
 
     /* ------- Product Description ----------*/
@@ -587,19 +619,26 @@ footer p {
         height: 14rem;
     }
 
+    .description-title {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .description-info {
+        font-size: 1.8rem;
+    }
+
+
 
     /*!* ------- Options and Prices --------*!*/
-    /*.price-container {*/
-    /*    justify-content: center;*/
-    /*    align-items: center;*/
-    /*}*/
+
 
     .price-box {
         width: 95%;
     }
 
     .price-box h2 {
-        font-size: 5rem;
+        font-size: 3.2rem;
         color: var(--textColor)
     }
 
@@ -621,20 +660,20 @@ footer p {
     .social-container {
         display: grid;
         grid-template-columns: 50% 50%;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
     }
 
     .fab,
     .fas {
-        font-size: 12rem;
+        font-size: 8rem;
     }
 
     /* ------- Footer --------------*/
 
     .footer p {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
 }
