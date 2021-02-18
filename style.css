@@ -449,6 +449,16 @@ footer p {
     nav li a {
         font-size: 5rem;
     }
+
+
+    nav li a::before {
+        display: none;
+    }
+
+    nav li a::after {
+        display: none;
+    }
+
     /* --- Hamburger Menu Bars ------------- */
     .bar1,
     .bar2,
@@ -574,6 +584,7 @@ footer p {
     nav li a {
         font-size: 3rem;
     }
+
 
     /* --- Hamburger Menu Bars ------------- */
     .bar1,
