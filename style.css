@@ -225,7 +225,6 @@ nav li:nth-of-type(4) {
 
 
 /* --------- Landing Page -------------- */
-
 #landing-page {
     background-image: url("https://images.unsplash.com/photo-1497091071254-cc9b2ba7c48a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80");
     /*./images/landingImg.jpg*/
@@ -435,10 +434,6 @@ footer p {
 }
 
 
-
-
-
-
 /*------------------------------ Media Queries ------------------------------------------------------------------*/
 
 /*------------------------------ TABLET ------------------------------------------------------------------*/
@@ -464,6 +459,7 @@ footer p {
     .bar3 {
         width: 50px;
     }
+
     /* --------- Landing Page ----------- */
     #landing-page {
         display: flex;
@@ -544,8 +540,6 @@ footer p {
     }
 
 
-
-
     .price-button {
         font-size: 3rem;
         box-shadow: none;
@@ -573,7 +567,6 @@ footer p {
     .footer p {
         font-size: 2.2rem;
     }
-
 }
 
 /* -------------------------------------------------- PHONE ---------------------------------------------------------*/
@@ -638,10 +631,7 @@ footer p {
         font-size: 1.8rem;
     }
 
-
-
     /*!* ------- Options and Prices --------*!*/
-
 
     .price-box {
         width: 95%;
